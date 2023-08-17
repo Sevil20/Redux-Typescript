@@ -1,9 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store/index'; // Make sure to import your Redux store configuration
 
+import App from './App'
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <App />
-)
